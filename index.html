@@ -1,15 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Tupã EJ</title>
 
-    <link rel="shortcut icon" href="favicon.ico" type="icon">
-    <link rel = "stylesheet" href = "./css/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <h1> testando nova branch criada </h1>
+
+    <!-- cabeçalho com menu-->
+    <header class="header">
+        <div class="logo">
+            <img src="./assets/images/icons/LogoVermelhoTupaHorizontal.png" alt="Logo Tupã">
+        </div>
+        <!-- o menu vai mudar e continuar fixo ao escrolar -->
+        <!-- mas a principio faz a customização dele padrão como no figma msm-->
+        <nav class="header-menu">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#quem-somos">Quem somos</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato" class="btn-contato">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!--secao inicial que vai preencher a tela toda-->
+        <section id="inicio" class="secao-inicial">
+            <div class="secao-inicial-text">
+                <h1>Desenvolvemos soluções tecnológicas de alto rendimento para pequenas, médias e grandes empresas.</h1>
+                <p>Transformamos a sua ideia em realidade</p>
+            </div>
+            <div class="secao-inicial-imagem">
+                <img src="./assets/images/celular.png" alt="Demonstração das soluções em um celular">
+            </div>
+        </section>
+
+        <!-- section quem somoss-->
+        <section id="quem-somos" class="sobre">
+            <h2>Quem somos</h2>
+            <p>
+                A Tupã é a primeira Empresa Júnior de Computação da Região Norte do Brasil, especializada no desenvolvimento de soluções tecnológicas que impulsionam a transformação digital de empresas e organizações. Constituída por estudantes da Universidade Federal do Amazonas (UFAM), unimos excelência técnica, inovação e compromisso com resultados para entregar projetos de alta qualidade nas áreas de desenvolvimento de software, consultoria e tecnologia. Mais do que criar soluções, buscamos estabelecer parcerias estratégicas, oferecendo serviços que geram valor, eficiência e crescimento para nossos clientes, enquanto formamos profissionais preparados para liderar os desafios do mercado.
+            </p>
+            <img src="./assets/images/icons/ApenasIconePrincipal.png" alt="Ícone principal Tupã">
+        </section>
+
+        <!-- Seçao do quadro com os cards que descrevem os serviços -->
+        <section id="servicos" class="servicos">
+            <h2>Serviços</h2>
+
+            <div class="quadro-servicos">
+                <article class="card-servico">
+                    <h3>Sites</h3>
+                    <p>Desenvolvemos sites institucionais, landing pages e portais modernos, rápidos e responsivos, projetados para fortalecer sua presença digital e transformar visitantes em clientes.</p>
+                </article>
+
+                <article class="card-servico">
+                    <h3>Sistemas de Gestão Interna</h3>
+                    <p>Desenvolvemos sistemas sob medida para automatizar processos, centralizar informações e otimizar a gestão da sua empresa, aumentando a eficiência e reduzindo custos operacionais.</p>
+                </article>
+
+                <article class="card-servico">
+                    <h3>Aplicativos</h3>
+                    <p>Desenvolvemos aplicações móveis e web sob medida, focadas em usabilidade, escalabilidade e alta performance.</p>
+                </article>
+
+                <article class="card-servico">
+                    <h3>Mentoria</h3>
+                    <p>Apoiamos empresas e equipes na tomada de decisões tecnológicas, desde a concepção da solução até a definição da arquitetura e das melhores práticas de desenvolvimento.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- aqui o footer  -->
+    <footer id="contato" class="rodape">
+        <div class="rodape-conteudo">
+            <div class="rodape-identificacao">
+                <div class="logos-parceiros">
+                    <img src="./assets/images/icons/LogoUFAM.png" alt="Logo UFAM">
+                    <img src="./assets/images/icons/logoIComp.png" alt="Logo IComp">
+                    <img src="./assets/images/icons/ApenasIconeVermelho.png" alt="Logo Tupã Vermelho">
+                </div>
+                <p>Tupã - Empresa Júnior de Computação da Universidade Federal do Amazonas</p>
+                <a href="/politica-de-privacidade">Política de Privacidade</a>
+                
+                <div class="redes-sociais">
+                    <a href="https://www.instagram.com/tupa.ej/?utm_source=ig_web_button_share_sheet" aria-label="Instagram"><img src="./assets/images/icons/vetorInstagram.svg" alt="Instagram"></a>
+                    <a href="#" aria-label="LinkedIn"><img src="./assets/images/icons/vetorLinkedin.svg" alt="LinkedIn"></a>
+                    <a href="#" aria-label="Facebook"><img src="./assets/images/icons/vetorfacebook.svg" alt="Facebook"></a>
+                </div>
+            </div>
+
+            <div class="rodape-links">
+                <h4>Serviços</h4>
+                <ul>
+                    <li>Desenvolvimento Web</li>
+                    <li>Desenvolvimento Mobile</li>
+                    <li>Mentoria</li>
+                </ul>
+            </div>
+
+            <div class="rodape-contato">
+                <h4>Contato</h4>
+                <a href="mailto:ej.tupacontato@gmail.com">ej.tupacontato@gmail.com</a>
+            </div>
+
+            <div class="rodape-endereco">
+                <h4>Endereço</h4>
+                <address>Av. Rodrigo Otávio, 6200 - Coroado, Manaus - AM (IComp/UFAM)</address>
+            </div>
+        </div>
+
+        <div class="rodape-copyright">
+            <p>&copy; 2026 Tupã - Todos os Direitos Reservados</p>
+        </div>
+    </footer>
+
 </body>
 </html>
