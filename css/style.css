@@ -1,5 +1,68 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
+html {
+  scroll-behavior: smooth;
+}
 
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.header{
+  width: 100%;
+  min-height: 100px;
+  padding: 10px 100px;
+  display: flex;
+  align-items: center;
+  background-color: #F7F2E6;
+}
+
+.logo{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.logo img{
+  width: 150px;
+}
+
+.header-menu{
+  width: 100%;
+}
+
+.header-menu ul{
+  display: flex;
+  list-style: none;
+  justify-content: flex-end
+}
+
+.header-menu ul li{
+  margin-left: 30px;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+  font-weight: 500
+}
+
+.active{
+  color: #FF0000;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px
+}
+
+.btn-contato{
+  background-color: #FF3102;
+  padding: 5px 10px;
+  color: #F7F2E6;
+  border-radius: 4px;
+}
 
 
 
