@@ -175,10 +175,10 @@ span{
 
 .rodape{
   background-color: #000;
-  padding: 50px;
 }
 
 .rodape-conteudo{
+  padding: 50px;
   display: flex;
   justify-content: space-between;
   color: #fff;
@@ -205,12 +205,13 @@ span{
 }
 
 .logos-parceiros{
+  display: flex;
+  gap: 15px;
   margin-bottom: 15px;
 }
 
 .logos-parceiros img{
-  width: 90px;
-  display:block;
+  height: 90px;
 }
 
 .redes-sociais{
@@ -220,7 +221,7 @@ span{
 
 .redes-sociais img{
   width: 30px;
-  display:block;
+  display: block;
 }
 
 .rodape-links,
@@ -241,6 +242,14 @@ span{
 
 .rodape-links ul{
   list-style: none;
+}
+
+.rodape-copyright{
+  background-color: #FF3102;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  color: #fff;
 }
 
 
