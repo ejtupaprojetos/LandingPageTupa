@@ -116,7 +116,8 @@ span{
   padding-bottom: 100px;
 }
 
-.sobre h2{
+.sobre h2,
+.servicos h2{
   font-weight: 600;
   padding: 60px;
 }
@@ -130,29 +131,24 @@ span{
 }
 
 .secao-sobre-container p{
-  max-width: 800px;
+  max-width: 100%;
   line-height: 1.8;
   margin: 0;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
 }
 
 .secao-sobre-container img{
   width: 300px;
+  margin: 0 60px;
 }
 
 /*seção serviços*/
 
-.servicos h2{
-  text-align: center;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
 .quadro-servicos{
   background-color: #000;
   padding: 40px;
-  margin: 50px;
+  margin: 0 50px 50px;
   border-radius: 30px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -190,7 +186,6 @@ span{
   padding: 50px;
   color: #fff;
   font-size: 12px;
-  gap: 20px;
   font-weight: 500;
 }
 
@@ -199,15 +194,15 @@ span{
   gap: 20px;
 }
 
-.rodape-identificacao .container{
+.rodape-identificacao .rodape-informacoes{
   display: flex;
   flex-direction: row;
 }
 
 .logos-parceiros{
-  width: 30%;
+  display: flex;
   gap: 15px;
-  margin-bottom: 15px;
+  margin: 0 150px 50px 0;
 }
 
 .logos-parceiros img{
@@ -218,11 +213,10 @@ span{
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 20px;
-  color: #fff;
 }
 
 .rodape-conteudo p{
-  width: 30%;
+  max-width: 420px;
 }
 
 .rodape-conteudo a{
@@ -246,7 +240,11 @@ span{
 .rodape-links,
 .rodape-contato,
 .rodape-endereco{
-  width: 250px;
+  min-width: 220px;
+}
+
+.rodape-endereco p{
+  display: none;
 }
 
 .rodape-contato img{
@@ -510,24 +508,31 @@ span{
   }
 
   .rodape-conteudo{
-    padding: 50px 20px;
+    padding: 50px 20px 0;
     color: #FFFFFFAB;
   }
   
   .rodape-conteudo h4{
     font-size: 14px;
-  }
-
-  .rodape-conteudo p{
-    width: 50%;
-    color: #FFFFFFAB;
+    margin: 0 0 10px 0;
+    color: #fff;
   }
   
   .rodape-identificacao{
     display: flex;
     flex-direction: column;
+    margin-bottom: 50px;
   }
   
+  .rodape-identificacao .rodape-informacoes{
+    justify-content: space-between;
+  }
+  
+  .rodape-links{
+    order: 2;
+    width: 250px;
+  }
+
   .logos-parceiros,
   .redes-sociais{
     width: 100%;
@@ -536,25 +541,21 @@ span{
     justify-content: center;
   }
 
-  .rodape-identificacao .container{
-    justify-content: space-between;
-  }
-
   .logos-parceiros img{
     height: 70px;
   }
-
-  .redes-sociais img{
-    width: 30px;
-  }
-
-  .rodape-links{
-    order: 2;
-    width: 250px;
-  }
-
+  
   .rodape-endereco{
     order: 1;
-    width: 450px;
+    width: 90%;
+  }
+  
+  .rodape-endereco p{
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .redes-sociais img{
+    width: 30px;
   }
 }
