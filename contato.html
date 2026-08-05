@@ -45,7 +45,12 @@
                 <p>Preencha as informações e entre em contato com a nossa equipe</p>
             </div>
 
-            <form action="https://formsubmit.co/maquiavelcampos@gmail.com" method="POST" class="form-contato">
+            <form action="https://formsubmit.co/ej.tupacontato@gmail.com" method="POST" class="form-contato">
+                <input type="hidden" name="_captcha" value="false">
+                <!-- alterar para a url do obrigado.html do serve local, futuramente a da vercel -->
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/obrigado.html"> 
+                <input type="hidden" name="_subject" value="Novo Contato pela Landing Page da Tupã">
+
                 <!-- Nome -->
                 <div class="form-grupo nome-input">
                     <label for="nome">Nome <span>*</span></label>
