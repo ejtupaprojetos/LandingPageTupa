@@ -295,6 +295,97 @@ span{
 }
 
 
+
+
+
+
+/*seção contato*/
+
+
+.secao-contato{
+  background-color: #F7F2E6;
+  padding: 70px;
+}
+
+.contato-cabecalho{
+  max-width: 70%;
+}
+
+.contato-cabecalho h2{
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 50px;
+
+}
+
+.contato-cabecalho p{
+  font-weight: bold;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  width: 60%;
+}
+
+.form-contato{
+  display: flex;
+  flex-direction: column;
+  padding: 60px 150px 60px 60px;
+  margin: 100px 30px 0;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  gap: 25px;
+}
+
+.form-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-grupo label{
+  font-weight: bold;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: .3px;
+}
+
+.form-grupo input,
+.form-grupo select,
+.form-grupo textarea{
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.form-grupo select,
+.nome-input input{
+    /* Estilo apenas para o primeiro input e o select*/
+    width: 60%;
+}
+
+.form-grupo input::placeholder{
+  color: #999;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+
+.form-tel-email{
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.form-tel-email .form-grupo{
+  min-width: 35%;
+}
+
+
+
+
+
 /*resposividade para mobile*/
 
 @media (max-width: 768px) {

@@ -41,14 +41,14 @@
         <!-- SEÇÃO DE CONTATO / FORMULÁRIO -->
         <section id="contato" class="secao-contato">
             <div class="contato-cabecalho">
-                <h2>Se interessou em algum dos nossos serviços?</h2>
+                <h2>Se <span>interessou</span> em algum dos nossos serviços?</h2>
                 <p>Preencha as informações e entre em contato com a nossa equipe</p>
             </div>
 
             <form action="#" method="POST" class="form-contato">
                 <!-- Nome -->
-                <div class="form-grupo">
-                    <label for="nome">Nome *</label>
+                <div class="form-grupo nome-input">
+                    <label for="nome">Nome <span>*</span></label>
                     <input 
                         type="text" 
                         id="nome" 
@@ -58,33 +58,37 @@
                     >
                 </div>
 
-                <!-- Telefone -->
-                <div class="form-grupo">
-                    <label for="telefone">Telefone *</label>
-                    <input 
-                        type="tel" 
-                        id="telefone" 
-                        name="telefone" 
-                        placeholder="(99) 99999-9999" 
-                        required
-                    >
-                </div>
+                <div class="form-tel-email">
 
-                <!-- E-mail -->
-                <div class="form-grupo">
-                    <label for="email">E-mail *</label>
-                    <input 
-                        type="email" 
-                        id="email" 
-                        name="email" 
-                        placeholder="Seu melhor E-mail" 
-                        required
-                    >
+                    <!-- Telefone -->
+                    <div class="form-grupo">
+                        <label for="telefone">Telefone <span>*</span></label>
+                        <input 
+                            type="tel" 
+                            id="telefone" 
+                            name="telefone" 
+                            placeholder="(99) 99999-9999" 
+                            required
+                        >
+                    </div>
+    
+                    <!-- E-mail -->
+                    <div class="form-grupo">
+                        <label for="email">E-mail <span>*</span></label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="Seu melhor E-mail" 
+                            required
+                        >
+                    </div>
+
                 </div>
 
                 <!-- Serviço de Interesse -->
                 <div class="form-grupo">
-                    <label for="servico">Serviço de Interesse *</label>
+                    <label for="servico">Serviço de Interesse <span>*</span></label>
                         <select id="servico" name="servico" required>
                             <option value="" disabled selected>Selecione um serviço</option>
                             <option value="sites">Sites</option>
@@ -96,7 +100,7 @@
 
                 <!-- Como podemos lhe ajudar -->
                 <div class="form-grupo">
-                    <label for="mensagem">Como Podemos lhe ajudar? *</label>
+                    <label for="mensagem">Como Podemos lhe ajudar? <span>*</span></label>
                     <textarea 
                         id="mensagem" 
                         name="mensagem" 
