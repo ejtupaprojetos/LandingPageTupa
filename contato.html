@@ -22,13 +22,18 @@
         <!-- o menu vai retornar para a pag principal, execeto o fale conosco-->
         <nav class="header-menu">
             <ul>
-                <li><a href="./index.html#inicio" class="active">Inicio</a></li>
-                <li><a href="./index.html#quem-somos">Quem somos</a></li>
-                <li><a href="./index.html#servicos">Serviços</a></li>
-                <li><a href="./index.html#projetos">Projetos</a></li>
+                <li><a href="./index.html#inicio" class="active">Inicio<img src="./assets/images/icons/vetorArrow.png" alt="Icone Seta"></a></li>
+                <li><a href="./index.html#quem-somos">Quem somos<img src="./assets/images/icons/vetorArrow.png" alt="Icone Seta"></a></li>
+                <li><a href="./index.html#servicos">Serviços<img src="./assets/images/icons/vetorArrow.png" alt="Icone Seta"></a></li>
+                <li><a href="./index.html#projetos">Projetos<img src="./assets/images/icons/vetorArrow.png" alt="Icone Seta"></a></li>
                 <li><a href="#contato" class="btn-contato">Fale Conosco</a></li>
             </ul>
         </nav>
+
+        <button class="menu-hamburguer">
+            <img src="./assets/images/icons/vetorMenu.png" alt="Icone Menu">
+        </button>
+
     </header>
     
     <main>
@@ -36,14 +41,14 @@
         <!-- SEÇÃO DE CONTATO / FORMULÁRIO -->
         <section id="contato" class="secao-contato">
             <div class="contato-cabecalho">
-                <h2>Se interessou em algum dos nossos serviços?</h2>
+                <h2>Se <span>interessou</span> em algum dos nossos serviços?</h2>
                 <p>Preencha as informações e entre em contato com a nossa equipe</p>
             </div>
 
             <form action="#" method="POST" class="form-contato">
                 <!-- Nome -->
-                <div class="form-grupo">
-                    <label for="nome">Nome *</label>
+                <div class="form-grupo nome-input">
+                    <label for="nome">Nome <span>*</span></label>
                     <input 
                         type="text" 
                         id="nome" 
@@ -53,33 +58,37 @@
                     >
                 </div>
 
-                <!-- Telefone -->
-                <div class="form-grupo">
-                    <label for="telefone">Telefone *</label>
-                    <input 
-                        type="tel" 
-                        id="telefone" 
-                        name="telefone" 
-                        placeholder="(99) 99999-9999" 
-                        required
-                    >
-                </div>
+                <div class="form-tel-email">
 
-                <!-- E-mail -->
-                <div class="form-grupo">
-                    <label for="email">E-mail *</label>
-                    <input 
-                        type="email" 
-                        id="email" 
-                        name="email" 
-                        placeholder="Seu melhor E-mail" 
-                        required
-                    >
+                    <!-- Telefone -->
+                    <div class="form-grupo">
+                        <label for="telefone">Telefone <span>*</span></label>
+                        <input 
+                            type="tel" 
+                            id="telefone" 
+                            name="telefone" 
+                            placeholder="(99) 99999-9999" 
+                            required
+                        >
+                    </div>
+    
+                    <!-- E-mail -->
+                    <div class="form-grupo">
+                        <label for="email">E-mail <span>*</span></label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="Seu melhor E-mail" 
+                            required
+                        >
+                    </div>
+
                 </div>
 
                 <!-- Serviço de Interesse -->
                 <div class="form-grupo">
-                    <label for="servico">Serviço de Interesse *</label>
+                    <label for="servico">Serviço de Interesse <span>*</span></label>
                         <select id="servico" name="servico" required>
                             <option value="" disabled selected>Selecione um serviço</option>
                             <option value="sites">Sites</option>
@@ -91,7 +100,7 @@
 
                 <!-- Como podemos lhe ajudar -->
                 <div class="form-grupo">
-                    <label for="mensagem">Como Podemos lhe ajudar? *</label>
+                    <label for="mensagem">Como Podemos lhe ajudar? <span>*</span></label>
                     <textarea 
                         id="mensagem" 
                         name="mensagem" 
@@ -108,6 +117,7 @@
             </form>
         </section>
     </main>
+
     <!-- Rodapé -->
     <footer id="contato" class="rodape">
         <div class="rodape-conteudo">
@@ -117,39 +127,53 @@
                     <img src="./assets/images/icons/logoIComp.png" alt="Logo IComp">
                     <img src="./assets/images/icons/ApenasIconeVermelho.png" alt="Logo Tupã Vermelho">
                 </div>
-                <p>Tupã - Empresa Júnior de Computação da Universidade Federal do Amazonas</p>
-                <a href="/politica-de-privacidade">Política de Privacidade</a>
                 
-                <div class="redes-sociais">
-                    <a href="https://www.instagram.com/tupa.ej/?utm_source=ig_web_button_share_sheet" aria-label="Instagram"><img src="./assets/images/icons/logoInstagram.png" alt="Instagram"></a>
-                    <a href="#" aria-label="LinkedIn"><img src="./assets/images/icons/logoLinkedin.png" alt="LinkedIn"></a>
-                    <a href="#" aria-label="Facebook"><img src="./assets/images/icons/logoFacebook.png" alt="Facebook"></a>
+                <div class="rodape-informacoes">
+                    <div class="rodape-links">
+                        <h4>Serviços</h4>
+                        <ul>
+                            <li>Desenvolvimento Web</li>
+                            <li>Desenvolvimento Mobile</li>
+                            <li>Mentoria</li>
+                        </ul>
+                    </div>
+        
+                    <div class="rodape-contato ocultar">
+                        <h4>Contato</h4>
+                        <a href="mailto:ej.tupacontato@gmail.com">
+                            <img src="./assets/images/icons/vetorEmail.png" alt="Instagram">
+                            ej.tupacontato@gmail.com
+                        </a>
+                    </div>
+                    
+                    
+                    <div class="rodape-endereco">
+                        <p>Tupã - Empresa Júnior de Computação da Universidade Federal do Amazonas</p>
+                        <h4>Endereço</h4>
+                        <address>Av. Rodrigo Otávio, 6200 - Coroado, Manaus - AM (IComp/UFAM)</address>
+                    </div>
                 </div>
             </div>
-
-            <div class="rodape-links">
-                <h4>Serviços</h4>
-                <ul>
-                    <li>Desenvolvimento Web</li>
-                    <li>Desenvolvimento Mobile</li>
-                    <li>Mentoria</li>
-                </ul>
+            
+            <div class="ocultar">
+                <p>Tupã - Empresa Júnior de Computação da Universidade Federal do Amazonas</p>
+                <a href="/politica-de-privacidade">Política de Privacidade</a>
             </div>
 
-            <div class="rodape-contato">
-                <h4>Contato</h4>
-                <a href="mailto:ej.tupacontato@gmail.com">ej.tupacontato@gmail.com</a>
+            <div class="redes-sociais">
+                <a href="https://www.instagram.com/tupa.ej/?utm_source=ig_web_button_share_sheet" aria-label="Instagram"><img src="./assets/images/icons/vetorInstagram.png" alt="Instagram"></a>
+                <a href="#" aria-label="LinkedIn"><img src="./assets/images/icons/vetorLinkedin.png" alt="LinkedIn"></a>
+                <a href="#" aria-label="Facebook"><img src="./assets/images/icons/vetorFacebook.png" alt="Facebook"></a>
             </div>
 
-            <div class="rodape-endereco">
-                <h4>Endereço</h4>
-                <address>Av. Rodrigo Otávio, 6200 - Coroado, Manaus - AM (IComp/UFAM)</address>
-            </div>
         </div>
 
         <div class="rodape-copyright">
             <p>&copy; 2026 Tupã - Todos os Direitos Reservados</p>
         </div>
     </footer>
+
+    <!-- script -->
+    <script src="./js/script.js"></script>
 </body>
 </html>

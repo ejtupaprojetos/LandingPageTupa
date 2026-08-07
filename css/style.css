@@ -6,6 +6,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -46,6 +47,10 @@ body {
   margin-left: 30px;
 }
 
+.header-menu img{
+  display: none;
+}
+
 .header a{
   text-decoration: none;
   color: #000;
@@ -62,12 +67,12 @@ body {
 .header-menu ul li .btn-contato{
   background-color: #FF3102;
   padding: 5px 10px;
-  color: #F7F2E6;
+  color: #fff;
   border-radius: 4px;
 }
 
-.header-menu ul li .btn-contato{
-  color: #fff;
+.menu-hamburguer{
+  display: none;
 }
 
 /*Seção inicial*/
@@ -111,7 +116,8 @@ span{
   padding-bottom: 100px;
 }
 
-.sobre h2{
+.sobre h2,
+.servicos h2{
   font-weight: 600;
   padding: 60px;
 }
@@ -125,29 +131,24 @@ span{
 }
 
 .secao-sobre-container p{
-  max-width: 800px;
+  max-width: 100%;
   line-height: 1.8;
   margin: 0;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
 }
 
 .secao-sobre-container img{
   width: 300px;
+  margin: 0 60px;
 }
 
 /*seção serviços*/
 
-.servicos h2{
-  text-align: center;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
 .quadro-servicos{
   background-color: #000;
   padding: 40px;
-  margin: 50px;
+  margin: 0 50px 50px;
   border-radius: 30px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -171,6 +172,10 @@ span{
   font-size: 18px;
 }
 
+.card-servico .txt-mobile{
+  display: none;
+}
+
 /*footer*/
 
 .rodape{
@@ -179,12 +184,29 @@ span{
 
 .rodape-conteudo{
   padding: 50px;
-  display: flex;
-  justify-content: space-between;
   color: #fff;
   font-size: 12px;
-  gap: 20px;
   font-weight: 500;
+}
+
+.rodape-identificacao{
+  display: flex;
+  gap: 20px;
+}
+
+.rodape-identificacao .rodape-informacoes{
+  display: flex;
+  flex-direction: row;
+}
+
+.logos-parceiros{
+  display: flex;
+  gap: 15px;
+  margin: 0 150px 50px 0;
+}
+
+.logos-parceiros img{
+  height: 90px;
 }
 
 .rodape-conteudo h4{
@@ -193,25 +215,16 @@ span{
   margin-bottom: 20px;
 }
 
+.rodape-conteudo p{
+  max-width: 420px;
+}
+
 .rodape-conteudo a{
   color: #fff;
   text-decoration: none;
-}
-
-.rodape-identificacao{
+  margin: 20px 0;
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.logos-parceiros{
-  display: flex;
-  gap: 15px;
-  margin-bottom: 15px;
-}
-
-.logos-parceiros img{
-  height: 90px;
+  align-items: center;
 }
 
 .redes-sociais{
@@ -227,13 +240,11 @@ span{
 .rodape-links,
 .rodape-contato,
 .rodape-endereco{
-  width: 250px
+  min-width: 220px;
 }
 
-.rodape-contato a{
-  display: flex;
-  align-items: center;
-  gap: 10px
+.rodape-endereco p{
+  display: none;
 }
 
 .rodape-contato img{
@@ -281,4 +292,361 @@ span{
 .btn-whatsapp-fixo:hover {
   transform: scale(1.1); /* Leve aumento de tamanho */
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+
+
+/*seção contato*/
+
+
+.secao-contato{
+  background-color: #F7F2E6;
+  padding: 70px;
+}
+
+.contato-cabecalho{
+  max-width: 70%;
+}
+
+.contato-cabecalho h2{
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 50px;
+
+}
+
+.contato-cabecalho p{
+  font-weight: bold;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  width: 60%;
+}
+
+.form-contato{
+  display: flex;
+  flex-direction: column;
+  padding: 60px 150px 60px 60px;
+  margin: 100px 30px 0;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  gap: 25px;
+}
+
+.form-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-grupo label{
+  font-weight: bold;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: .3px;
+}
+
+.form-grupo input,
+.form-grupo select,
+.form-grupo textarea{
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.form-grupo select,
+.nome-input input{
+    /* Estilo apenas para o primeiro input e o select*/
+    width: 60%;
+}
+
+.form-grupo input::placeholder{
+  color: #999;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+
+.form-tel-email{
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.form-tel-email .form-grupo{
+  min-width: 35%;
+}
+
+
+
+
+
+/*resposividade para mobile*/
+
+@media (max-width: 768px) {
+
+  /*menu*/
+
+  .menu-hamburguer{
+    display: flex;
+    justify-content: flex-end;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .menu-hamburguer img{
+    width: 50px;
+    display: block;
+  }
+
+  .header-menu{
+    display: none;
+  }
+
+  .header.ativo{
+    position: relative;
+    display: flex;
+    background-color: #202020;
+    height: 100vh;
+    padding: 0;
+  }
+
+  .header.ativo .menu-hamburguer{
+    position: absolute;
+    top: 0;
+    min-height: 100px;
+    padding: 10px 100px;
+    display: flex;
+    align-items: center;
+  }
+
+  .header.ativo .logo{
+    display: none;
+  }
+
+  .header.ativo .header-menu{
+    display: block;
+    height: 100%;
+  }
+
+  .header.ativo .header-menu ul{
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 10px;
+  }
+
+  .header.ativo .header-menu ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 80%;
+  }
+
+  .header.ativo .header-menu ul li .active{
+    color: #FF3102;
+    text-decoration: none;
+  }
+
+  .header.ativo .header-menu a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  .header.ativo .header-menu img{
+    display: block;
+    height: 10px;
+  }
+
+  .header.ativo .header-menu ul li .btn-contato{
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    width: 100%;
+    margin: 100px 0;
+    border: none;
+  }
+  
+  .logo img{
+    width: 120px;
+  }
+
+  /*seção inicial*/
+
+  .secao-inicial{
+    display: flex;
+    flex-direction: column;
+    padding: 250px 20px 100px;
+  }
+  
+  .secao-inicial-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+  }
+
+  .secao-inicial-text h1{
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+
+  .secao-inicial-text p{
+    text-align: center;
+    margin: 0;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255,255,255,.6);
+    font-size: 22px;
+    letter-spacing: .5px;
+    font-weight: 600;
+  }
+
+  .secao-inicial-imagem img{
+    display: none;
+  }
+
+  /*seção sobre*/
+
+  .sobre h2{
+    padding: 70px 0 30px;
+    font-size: 28px;
+  }
+
+  .secao-sobre-container{
+    padding: 20px;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .secao-sobre-container p{
+    font-size: 16px;
+  }
+
+  .secao-sobre-container img{
+    width: 150px;
+  }
+
+  /*seção serviços*/
+
+  .servicos h2{
+    padding: 70px 0 0 0;
+    margin-bottom: 0;
+    font-size: 28px;
+  }
+
+  .quadro-servicos{
+    background-color: #F7F2E6;
+    padding: 40px;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: none;
+    gap: 30px;
+    border-radius: 0px;
+  }
+
+  .card-servico{
+    background-color: #000;
+    padding: 10px 25px;
+    border-radius: 30px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .card-servico h3{
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+
+  .card-servico p{
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.61);
+    font-weight: 400;
+  }
+
+  .card-servico .txt-mobile{
+    display: block;
+  }
+
+  .card-servico .txt-desktop{
+    display: none;
+  }
+
+  /*footer*/
+
+  .ocultar{
+    display: none;
+  }
+
+  .rodape-conteudo{
+    padding: 50px 20px 0;
+    color: #FFFFFFAB;
+  }
+  
+  .rodape-conteudo h4{
+    font-size: 14px;
+    margin: 0 0 10px 0;
+    color: #fff;
+  }
+  
+  .rodape-identificacao{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+  
+  .rodape-identificacao .rodape-informacoes{
+    justify-content: space-between;
+  }
+  
+  .rodape-links{
+    order: 2;
+    width: 250px;
+  }
+
+  .logos-parceiros,
+  .redes-sociais{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logos-parceiros img{
+    height: 70px;
+  }
+  
+  .rodape-endereco{
+    order: 1;
+    width: 90%;
+  }
+  
+  .rodape-endereco p{
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .redes-sociais img{
+    width: 30px;
+  }
 }
