@@ -207,5 +207,27 @@
 
     <script src="./js/script.js"></script>
 
+    <script>
+      // Ativa a animação de entrada da seção "Quem somos"
+      document.addEventListener('DOMContentLoaded', function () {
+        var secaoQuemSomos = document.getElementById('quem-somos');
+        if (!secaoQuemSomos) return;
+
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              secaoQuemSomos.classList.add('is-visible');
+              observer.disconnect();
+            }
+          });
+        }, { threshold: 0.18 });
+
+        observer.observe(secaoQuemSomos);
+      });
+    </script>
+
+</body>
+</html>
+
 </body>
 </html>
