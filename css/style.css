@@ -139,7 +139,8 @@ span{
 }
 
 .secao-sobre-container img{
-  width: 300px;
+  max-width: 100%;
+  height: auto;
   margin: 0 60px;
 }
 
@@ -240,7 +241,8 @@ span{
 .rodape-links,
 .rodape-contato,
 .rodape-endereco{
-  min-width: 220px;
+  width: 100%;
+  max-width: 250px;
 }
 
 .rodape-endereco p{
@@ -260,6 +262,7 @@ span{
   padding: 10px;
   display: flex;
   justify-content: center;
+  text-align: center;
   color: #fff;
 }
 
@@ -404,6 +407,10 @@ span{
   .menu-hamburguer img{
     width: 50px;
     display: block;
+  }
+
+  .header{
+    padding: 10px 50px;
   }
 
   .header-menu{
@@ -553,7 +560,7 @@ span{
 
   .quadro-servicos{
     background-color: #F7F2E6;
-    padding: 40px;
+    padding: 30px;
     margin: 50px;
     display: flex;
     flex-direction: column;
@@ -649,4 +656,22 @@ span{
   .redes-sociais img{
     width: 30px;
   }
+}
+
+@media (max-width: 480px) {
+  
+  .header.ativo .menu-hamburguer,
+  .header{
+    padding: 10px 20px;
+  }
+
+  .secao-inicial{
+    padding: 150px 20px 100px;
+  }
+
+  .quadro-servicos{
+    padding: 0px;
+    margin: 40px;
+  }
+
 }
