@@ -51,16 +51,54 @@
         </section>
 
         <!-- section quem somoss-->
-        <section id="quem-somos" class="sobre">
-            <h2>Quem somos</h2>
-            <div class="secao-sobre-container">
-                <p>
-                    A Tupã é a <span>primeira Empresa Júnior</span> de Computação da Região Norte do Brasil, especializada no desenvolvimento de soluções tecnológicas que impulsionam a transformação digital de empresas e organizações. Constituída por estudantes da Universidade Federal do Amazonas (UFAM), unimos excelência técnica, inovação e compromisso com resultados para entregar projetos de alta qualidade nas áreas de desenvolvimento de software, consultoria e tecnologia. Mais do que criar soluções, buscamos estabelecer parcerias estratégicas, oferecendo serviços que geram valor, eficiência e crescimento para nossos clientes, enquanto formamos profissionais preparados para liderar os desafios do mercado.
-                </p>
-                <img src="./assets/images/icons/ApenasIconePrincipal.png" alt="Ícone principal Tupã">
+          <section id="quem-somos">
+            <span class="qs-corner qs-tl">AM · 03°07'S 60°01'W</span>
+            <span class="qs-corner qs-br">TUPÃ / EMPRESA JÚNIOR</span>
+ 
+            <div class="qs-wrap">
+                <div class="qs-eyebrow"><span class="qs-dot"></span>SOBRE A TUPÃ</div>
+                <h2>Quem somos</h2>
+                <div class="qs-rule"></div>
+ 
+                <div class="secao-sobre-container">
+                    <div class="qs-orbit-stage">
+                        <div class="qs-orbit-glow"></div>
+                        <div class="qs-orbit-ring"></div>
+                        <div class="qs-orbit-ring-inner"></div>
+                        <div class="qs-orbit-rotator"><div class="qs-satellite"></div></div>
+                        <div class="qs-logo-wrap">
+                            <img src="./assets/images/icons/ApenasIconePrincipal.png" alt="Ícone principal Tupã">
+                        </div>
+                        <div class="qs-chip qs-chip-top"><span class="qs-chip-dot"></span>1ª <b>no Norte do Brasil</b></div>
+                        <div class="qs-chip qs-chip-bottom"><span class="qs-chip-dot"></span><b>UFAM</b> · Amazonas</div>
+                    </div>
+ 
+                    <div class="qs-text-col">
+                        <p class="qs-lede">
+                            A Tupã é a <span>primeira Empresa Júnior</span> de Computação da Região Norte do Brasil, especializada no desenvolvimento de soluções tecnológicas que impulsionam a transformação digital de empresas e organizações. Constituída por estudantes da Universidade Federal do Amazonas (UFAM), unimos excelência técnica, inovação e compromisso com resultados para entregar projetos de alta qualidade nas áreas de desenvolvimento de software, consultoria e tecnologia. Mais do que criar soluções, buscamos estabelecer parcerias estratégicas, oferecendo serviços que geram valor, eficiência e crescimento para nossos clientes, enquanto formamos profissionais preparados para liderar os desafios do mercado.
+                        </p>
+ 
+                        <div class="qs-pillars">
+                            <div class="qs-pillar">
+                                <div class="qs-pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.2"/><circle cx="12" cy="12" r="0.6" fill="#F7F2E6"/></svg></div>
+                                <h3>Excelência técnica</h3>
+                                <p>Rigor e padrão elevado em cada linha de código e em cada entrega de projeto.</p>
+                            </div>
+                            <div class="qs-pillar">
+                                <div class="qs-pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg></div>
+                                <h3>Inovação</h3>
+                                <p>Tecnologia aplicada para impulsionar a transformação digital de organizações.</p>
+                            </div>
+                            <div class="qs-pillar">
+                                <div class="qs-pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12l3 3 6-6"/><circle cx="12" cy="12" r="9"/></svg></div>
+                                <h3>Compromisso</h3>
+                                <p>Parcerias estratégicas que geram valor, eficiência e crescimento real.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-
         <!-- Seçao do quadro com os cards que descrevem os serviços -->
         <section id="servicos" class="servicos">
             <h2>Serviços</h2>
@@ -168,6 +206,28 @@
     <!-- script -->
 
     <script src="./js/script.js"></script>
+
+    <script>
+      // Ativa a animação de entrada da seção "Quem somos"
+      document.addEventListener('DOMContentLoaded', function () {
+        var secaoQuemSomos = document.getElementById('quem-somos');
+        if (!secaoQuemSomos) return;
+
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              secaoQuemSomos.classList.add('is-visible');
+              observer.disconnect();
+            }
+          });
+        }, { threshold: 0.18 });
+
+        observer.observe(secaoQuemSomos);
+      });
+    </script>
+
+</body>
+</html>
 
 </body>
 </html>

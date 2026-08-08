@@ -1,10 +1,3 @@
-const btn = document.querySelector(".menu-hamburguer");
-const menu = document.querySelector(".header");
-
-btn.addEventListener("click", () => { //quando clicar no botão o js adiciona/remove (alterna) a classe ativo
-    menu.classList.toggle("ativo");
-});
-
 // Ativa a animação de entrada da seção "Quem somos" quando ela entra na tela
 document.addEventListener('DOMContentLoaded', function () {
   var secaoQuemSomos = document.getElementById('quem-somos');
