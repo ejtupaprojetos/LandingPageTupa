@@ -998,22 +998,26 @@ span{
   .qs-corner{ display:none; }
 
 
-@media (prefers-reduced-motion: reduce){
-  .qs-orbit-ring, .qs-orbit-ring-inner, .qs-orbit-rotator, .qs-orbit-glow, .qs-chip{
-    animation: none !important;
+  @media (prefers-reduced-motion: reduce){
+    .qs-orbit-ring, .qs-orbit-ring-inner, .qs-orbit-rotator, .qs-orbit-glow, .qs-chip{
+      animation: none !important;
+    }
   }
-}
 
   /*seção serviços*/
 
+  .servicos{
+    padding: 0;
+  }
+
   .servicos-topo {
-      margin: 0 50px 40px;
+      margin: 0 30px 40px;
       padding-top: 70px;
       max-width: 100%;
   }
 
   .servicos-title {
-      font-size: 28px;
+      font-size: clamp(2.4rem, 5vw, 3.4rem);
   }
 
   .servicos-description {
@@ -1021,7 +1025,7 @@ span{
   }
 
   .quadro-servicos {
-      margin: 0 50px 50px;
+      margin: 0 30px 50px;
       padding: 0;
       display: flex;
       flex-direction: column;
@@ -1138,27 +1142,27 @@ span{
   }
 
   .servicos-topo {
-      margin: 0 40px 30px;
+      margin: 0 20px 30px;
   }
 
   .servicos-title {
-      font-size: 24px;
+    font-size: 25px;
   }
 
   .quadro-servicos {
-      margin: 0 40px 40px;
+      margin: 0 20px 40px;
   }
 
   .card-servico {
-      padding: 20px;
+      padding: 15px;
   }
 
   .card-servico h3 {
-      font-size: 20px;
+      font-size: 18px;
   }
 
   .card-servico p {
-      font-size: 15px;
+      font-size: 14px;
   }
 
 
