@@ -11,6 +11,7 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
+  background: #F7F2E6;
 }
 
 /*menu*/
@@ -124,7 +125,7 @@ span{
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  background: #fff;
+  background: #F7F2E6;
   padding: 6rem 1.5rem 7rem;
   font-family: 'Inter', 'Poppins', sans-serif;
   color: var(--qs-ink);
@@ -391,47 +392,250 @@ span{
 
 /*seção serviços*/
 
-.servicos{
-  padding: 100px 50px 0;
+.servicos {
+    padding: 100px 50px 0;
 }
 
-.servicos h2{
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 2.2rem;
-  font-weight: 700;
+.servicos-topo {
+    max-width: 820px;
+    margin: 0 0 50px;
 }
 
-.quadro-servicos{
-  background-color: #000;
-  padding: 40px;
-  margin: 0 50px 50px;
-  border-radius: 30px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+.servicos-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.card-servico{
-  background-color: #F7F2E6;
-  padding: 30px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.servicos-eyebrow-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #FF3102;
+    flex-shrink: 0;
+}
+
+.servicos-title {
+    font-family:'Space Grotesk', 'Poppins', sans-serif;
+    font-weight:700;
+    font-size: clamp(2.4rem, 5vw, 3.4rem);
+    letter-spacing:-0.01em;
+    margin:0 0 1.9rem;
+    color: var(--qs-ink);
+    opacity:0; transform:translateY(14px);
+    transition:opacity .8s ease .05s, transform .8s ease .05s;
+}
+
+.servicos-title .destaque {
+    color: #FF3102;
+}
+
+.servicos-description {
+    max-width: 520px;
+    font-size: 16px;
+    line-height: 1.7;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.65);
+    margin-bottom: 24px;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.servicos-linha {
+    display: block;
+    width: 48px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #FF3102;
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.quadro-servicos {
+    background-color: transparent;
+    padding: 0;
+    margin: 0 50px 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.card-servico {
+    position: relative;
+    background-color: #000;
+    padding: 40px;
+    border-radius: 24px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid rgba(255, 49, 2, 0);
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.6s ease, transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card-servico:hover {
+    transform: scale(1.02) translateY(-4px);
+    border-color: rgba(255, 49, 2, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 49, 2, 0.08);
+}
+
+.card-numero {
+    position: relative;
+    z-index: 1;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #FF3102;
+    letter-spacing: 0.15em;
+    opacity: 0.65;
+    margin-bottom: 24px;
+    transition: opacity 0.4s ease;
+}
+
+.card-servico:hover .card-numero {
+    opacity: 1;
+}
+
+.card-icone {
+    position: relative;
+    z-index: 1;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 49, 2, 0.35);
+    border-radius: 12px;
+    color: #FF3102;
+    margin-bottom: 20px;
+    transition: transform 0.4s ease, border-color 0.4s ease, background-color 0.4s ease;
+}
+
+.card-icone svg {
+    width: 22px;
+    height: 22px;
+}
+
+.card-servico:hover .card-icone {
+    transform: translateY(-2px) rotate(-4deg);
+    border-color: rgba(255, 49, 2, 0.7);
+    background-color: rgba(255, 49, 2, 0.08);
 }
 
 .card-servico h3,
-.card-servico p{
-  font-weight: 500;
-  margin: 10px 0;
-  font-size: 18px;
+.card-servico p {
+    font-weight: 500;
+    margin: 10px 0;
+    font-size: 18px;
+    position: relative;
+    z-index: 1;
 }
 
-.card-servico .txt-mobile{
-  display: none;
+.card-servico h3 {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 0;
 }
+
+.card-servico p {
+    color: rgba(255, 255, 255, 0.61);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* elementos orbitais — inspirados na imagem de referência */
+.card-orbita {
+    position: absolute;
+    bottom: 18px;
+    right: 18px;
+    width: 76px;
+    height: 76px;
+    border: 1px dashed rgba(255, 49, 2, 0.16);
+    border-radius: 50%;
+    opacity: 0.5;
+    pointer-events: none;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.card-orbita--interna {
+    bottom: 34px;
+    right: 34px;
+    width: 44px;
+    height: 44px;
+    border-style: solid;
+    border-color: rgba(255, 49, 2, 0.14);
+}
+
+.card-servico:hover .card-orbita {
+    opacity: 0.9;
+    transform: scale(1.06);
+}
+
+.card-ponto {
+    position: absolute;
+    bottom: 40px;
+    right: 24px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #FF3102;
+    opacity: 0;
+    transform: scale(0);
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.card-servico:hover .card-ponto {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ===== Entrada em viewport — mesma linguagem da seção "Quem somos" ===== */
+.servicos.is-visible .servicos-eyebrow,
+.servicos.is-visible .servicos-title,
+.servicos.is-visible .servicos-description,
+.servicos.is-visible .card-servico {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.servicos.is-visible .servicos-linha {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.servicos.is-visible .servicos-eyebrow { transition-delay: 0.08s; }
+.servicos.is-visible .servicos-title { transition-delay: 0.18s; }
+.servicos.is-visible .servicos-description { transition-delay: 0.28s; }
+.servicos.is-visible .servicos-linha { transition-delay: 0.38s; }
+
+.servicos.is-visible .card-servico:nth-child(1) { transition-delay: 0.48s; }
+.servicos.is-visible .card-servico:nth-child(2) { transition-delay: 0.58s; }
+.servicos.is-visible .card-servico:nth-child(3) { transition-delay: 0.68s; }
+.servicos.is-visible .card-servico:nth-child(4) { transition-delay: 0.78s; }
+
+/* depois que o card já apareceu, o hover volta a responder na hora */
+.servicos.is-visible .card-servico:hover {
+    transform: scale(1.02) translateY(-4px);
+    transition-delay: 0s;
+}
+
 
 /*footer*/
 
@@ -802,52 +1006,64 @@ span{
 
   /*seção serviços*/
 
-  .servicos h2{
-    padding: 70px 0 0 0;
-    margin-bottom: 0;
-    font-size: 28px;
+  .servicos-topo {
+      margin: 0 50px 40px;
+      padding-top: 70px;
+      max-width: 100%;
   }
 
-  .quadro-servicos{
-    background-color: #F7F2E6;
-    padding: 30px;
-    margin: 50px;
-    display: flex;
-    flex-direction: column;
-    grid-template-columns: none;
-    gap: 30px;
-    border-radius: 0px;
+  .servicos-title {
+      font-size: 28px;
   }
 
-  .card-servico{
-    background-color: #000;
-    padding: 10px 25px;
-    border-radius: 30px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
+  .servicos-description {
+      font-size: 15px;
   }
 
-  .card-servico h3{
-    color: #fff;
-    font-size: 24px;
-    margin-bottom: 0;
+  .quadro-servicos {
+      margin: 0 50px 50px;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      grid-template-columns: none;
+      gap: 30px;
   }
 
-  .card-servico p{
-    font-size: 20px;
-    color: rgba(255, 255, 255, 0.61);
-    font-weight: 400;
+  .card-servico {
+      padding: 24px 25px;
+      border-radius: 24px;
+      align-items: flex-start;
+      transition: none;
   }
 
-  .card-servico .txt-mobile{
-    display: block;
+  .card-servico:hover {
+      transform: none;
+      border-color: transparent;
+      box-shadow: none;
   }
 
-  .card-servico .txt-desktop{
-    display: none;
+  .card-icone,
+  .card-orbita,
+  .card-ponto {
+      display: none;
   }
+
+  .card-numero {
+      font-size: 13px;
+      margin-bottom: 12px;
+      opacity: 0.8;
+  }
+
+  .card-servico h3 {
+      font-size: 22px;
+      margin-bottom: 6px;
+  }
+
+  .card-servico p {
+      font-size: 16px;
+      line-height: 1.5;
+  }
+
 
   /*footer*/
 
@@ -921,9 +1137,43 @@ span{
     padding: 150px 20px 100px;
   }
 
-  .quadro-servicos{
-    padding: 0px;
-    margin: 40px;
+  .servicos-topo {
+      margin: 0 40px 30px;
   }
 
+  .servicos-title {
+      font-size: 24px;
+  }
+
+  .quadro-servicos {
+      margin: 0 40px 40px;
+  }
+
+  .card-servico {
+      padding: 20px;
+  }
+
+  .card-servico h3 {
+      font-size: 20px;
+  }
+
+  .card-servico p {
+      font-size: 15px;
+  }
+
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .servicos-eyebrow,
+    .servicos-title,
+    .servicos-description,
+    .servicos-linha,
+    .card-servico,
+    .card-icone,
+    .card-numero,
+    .card-orbita,
+    .card-ponto {
+        transition: none;
+    }
 }
