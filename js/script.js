@@ -21,3 +21,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
   observer.observe(secaoQuemSomos);
 });
+
+// Ativa a animação de entrada da seção "Serviços" quando ela entra na tela
+
+const servicos = document.querySelector('.servicos');
+
+const observerServicos = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observerServicos.unobserve(entry.target);
+            }
+        });
+    },
+    { threshold: 0.15 }
+);
+
+if (servicos) {
+    observerServicos.observe(servicos);
+}
