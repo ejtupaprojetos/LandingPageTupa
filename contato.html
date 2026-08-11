@@ -45,7 +45,10 @@
                 <p>Preencha as informações e entre em contato com a nossa equipe</p>
             </div>
 
-            <form action="#" method="POST" class="form-contato">
+            <form action="https://formsubmit.co/ej.tupacontato@gmail.com" method="POST" class="form-contato" novalidate>
+                <input type="hidden" name="_captcha" value="false"> 
+                <input type="hidden" name="_subject" value="Novo Contato pela Landing Page da Tupã">
+
                 <!-- Nome -->
                 <div class="form-grupo nome-input">
                     <label for="nome">Nome <span>*</span></label>
@@ -117,6 +120,32 @@
             </form>
         </section>
     </main>
+
+    <!-- pop up de sucesso ao enviar-->
+    <dialog id="modal-sucesso" class="modal-dialog">
+        <div class="modal-content">
+            <button class="modal-close" onclick="document.getElementById('modal-sucesso').close()">&times;</button>
+            <div class="modal-icon icon-sucesso">
+                <img src="./assets/images/icons/iconeSucesso.png" alt="icone sucesso " class="img-icone">
+            </div>
+            <h3>Mensagem enviada!</h3>
+            <p>Recebemos sua mensagem e em breve nossa equipe vai entrar em contato. Obrigado por falar com a <span>Tupã</span>!</p>
+            <button class="btn-modal" onclick="document.getElementById('modal-sucesso').close()">Fechar</button>
+        </div>
+    </dialog>
+ 
+    <!-- pop up de erro -->
+    <dialog id="modal-erro" class="modal-dialog">
+        <div class="modal-content">
+            <button class="modal-close" onclick="document.getElementById('modal-erro').close()">&times;</button>
+            <div class="modal-icon icon-erro">
+                <img src="./assets/images/icons/iconeErro.png" alt="icone sucesso " class="img-icone">
+            </div>
+            <h3>Não foi possível enviar</h3>
+            <p>Algo deu errado ao enviar sua mensagem. Tente novamente ou fale com a gente pelo WhatsApp</p>
+            <button class="btn-modal" onclick="document.getElementById('modal-erro').close()">Tentar novamente</button>
+        </div>
+    </dialog>
 
     <!-- Rodapé -->
     <footer id="contato" class="rodape">

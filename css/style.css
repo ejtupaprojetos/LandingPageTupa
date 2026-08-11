@@ -759,11 +759,7 @@ span{
 
 
 
-
-
-
 /*seção contato*/
-
 
 .secao-contato{
   background-color: #F7F2E6;
@@ -845,6 +841,103 @@ span{
   min-width: 35%;
 }
 
+/*estilização dos pop-ups do formulario*/
+.modal-dialog {
+    border: none;
+    border-radius: 16px;
+    padding: 0;
+    background: transparent;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+.modal-dialog::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(2px);
+}
+
+.modal-content {
+    background: #FDFBF7;
+    padding: 32px 24px;
+    border-radius: 16px;
+    text-align: center;
+    position: relative;
+    border-bottom: 4px solid #FF3102;
+;
+}
+
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    border: none;
+    background: #E0E0E0;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.modal-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px auto;
+    font-size: 28px;
+    color: #FFF;
+    background: linear-gradient(to bottom, #FF3102, #a31e00);
+}
+
+.modal-icon .img-icone{
+  width: 45px;              /* Ajuste aqui para diminuir ou aumentar a imagem */
+  height: 45px;
+  object-fit: contain;      /* Mantém a proporção da imagem sem distorcer */
+  display: block;
+}
+
+
+.modal-content h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 12px;
+}
+
+.modal-content p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 24px;
+    line-height: 1.4;
+}
+
+.modal-content p span {
+    color: #FF3102;
+    font-weight: 600;
+}
+
+.btn-modal {
+    width: 100%;
+    background-color: #FF3102;
+;
+    color: #FFF;
+    border: none;
+    padding: 12px 0;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+}
 
 
 
