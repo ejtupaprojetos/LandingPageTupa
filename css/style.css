@@ -761,6 +761,47 @@ span{
 
 /*seção contato*/
 
+
+.form-grupo-botao{
+  margin-top: 10px;
+}
+
+.btn-enviar{
+  width: 100%;
+  background-color: #FF3102;
+  color: #fff;
+  border: none;
+  padding: 16px 0;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: .3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.15s ease, box-shadow 0.3s ease;
+}
+
+.btn-enviar:hover{
+  background-color: #D92800;
+  box-shadow: 0 8px 20px rgba(255, 49, 2, 0.35);
+}
+
+.btn-enviar:active{
+  transform: scale(0.98);
+  background-color: #B82200;
+}
+
+.btn-enviar:focus-visible{
+  outline: 2px solid #FF3102;
+  outline-offset: 3px;
+}
+
+.btn-enviar:disabled{
+  background-color: #FFB199;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
 .secao-contato{
   background-color: #F7F2E6;
   padding: 70px;
@@ -1221,6 +1262,12 @@ span{
   }
 
   /*seção contato*/
+
+  .btn-enviar{
+    padding: 14px 0;
+    font-size: 15px;
+    border-radius: 8px;
+  }
 
   .secao-contato{
     padding: 60px 20px;
