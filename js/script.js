@@ -41,3 +41,50 @@ const observerServicos = new IntersectionObserver(
 if (servicos) {
     observerServicos.observe(servicos);
 }
+
+// scripits do pop up
+
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('.form-contato');
+    const modalSucesso = document.getElementById('modal-sucesso');
+    const modalErro = document.getElementById('modal-erro');
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        if (!form.checkValidity()) {
+            modalErro.showModal();
+            return;
+        }
+
+        const btnEnviar = form.querySelector('.btn-enviar');
+        btnEnviar.disabled = true;
+        btnEnviar.textContent = "Enviando...";
+
+        const formData = new FormData(form);
+        const objectData = Object.fromEntries(formData.entries());
+
+        try {
+            const response = await fetch("https://formsubmit.co/ajax/maquiavelcampos@gmail.com", {
+                method: "POST",
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(objectData)
+            });
+
+            if (response.ok) {
+                modalSucesso.showModal();
+                form.reset();
+            } else {
+                modalErro.showModal();
+            }
+        } catch (error) {
+            modalErro.showModal();
+        } finally {
+            btnEnviar.disabled = false;
+            btnEnviar.textContent = "Enviar Mensagem";
+        }
+    });
+});
